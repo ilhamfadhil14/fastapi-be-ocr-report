@@ -1,14 +1,14 @@
 from pydantic import BaseModel
 from typing import Optional
-from datetime import date
+from datetime import datetime
 
 class OCRReportCreate(BaseModel):
     file_name: Optional[str]
     total_page: Optional[str]
     model_name: Optional[str]
     temperature: Optional[float]
-    date_time: Optional[date]
-    running_time: Optional[date]
+    date_time: Optional[datetime]
+    running_time: Optional[float]
     input_token: Optional[int]
     output_token: Optional[int]
     total_token: Optional[int]

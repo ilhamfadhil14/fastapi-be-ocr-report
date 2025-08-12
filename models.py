@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, Text, Date, Float
+from sqlalchemy import Column, Integer, Text, Float, TIMESTAMP, Numeric
 from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
@@ -11,8 +11,8 @@ class OCRReport(Base):
     total_page = Column(Text)
     model_name = Column(Text)
     temperature = Column(Float)
-    date_time = Column(Date)
-    running_time = Column(Date)
+    date_time = Column(TIMESTAMP)
+    running_time = Column(Numeric)
     input_token = Column(Integer)
     output_token = Column(Integer)
     total_token = Column(Integer)
